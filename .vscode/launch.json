@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "playaudio",
+            "type": "python",
+            "request": "launch",
+            "program": "playsound.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "greeting.wav"
+            ]
+        },
+        {
+            "name": "main",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "greeting.wav"
+            ]
+        }
+    ]
+}
