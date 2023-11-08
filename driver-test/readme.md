@@ -9,4 +9,6 @@ https://leimao.github.io/blog/Docker-Container-Audio/
 
 `docker run -it --rm --device /dev/snd audiotest`
 
+test
+
 `arecord -l`
