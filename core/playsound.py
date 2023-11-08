@@ -15,12 +15,21 @@ with wave.open(sys.argv[1], 'rb') as wf:
     # Instantiate PyAudio and initialize PortAudio system resources (1)
     p = pyaudio.PyAudio()
 
+    ch = wf.getnchannels()
+    print(ch)
+    index = 0
+    data = p.get_device_info_by_index(index)
+
+    def2 = p.get_default_output_device_info()
+    print(def2)
+    
+
     # Open stream (2)
     stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
                     channels=wf.getnchannels(),
-                    rate=wf.getframerate(),
+                    rate=int(data['defaultSampleRate']),
                     output=True
-                    ,output_device_index=4
+                    ,output_device_index=0
                     )
 
     # Play samples from the wave file (3)

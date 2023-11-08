@@ -14,4 +14,5 @@ print(info)
 for x in range(0, info):
     #print("We're on time %d" % (x))
     data = p.get_device_info_by_index(x)
+    print(data)
     print(f"{x} - {data['defaultSampleRate']} - {data['name']} - {data['hostApi']}")
