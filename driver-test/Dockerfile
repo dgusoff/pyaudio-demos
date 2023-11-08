@@ -9,3 +9,13 @@ RUN apt-get update -y && \
         alsa-utils \
         libsndfile1-dev && \
     apt-get clean
+
+COPY audiotest.sh app/audiotest.sh
+
+WORKDIR /app
+
+RUN ls 
+RUN arecord -l
+RUN chmod +x audiotest.sh
+RUN ./audiotest.sh
+ENTRYPOINT [ "./audiotest.sh" ]
